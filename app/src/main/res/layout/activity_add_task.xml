@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTask">
+
+    <TextView
+        android:id="@+id/textViewAddTime"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvTime"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddDifficulty"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddDifficulty" />
+
+    <TextView
+        android:id="@+id/textViewAddDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvDate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddTime" />
+
+    <TextView
+        android:id="@+id/textViewAddPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvPriority"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddDate" />
+
+    <TextView
+        android:id="@+id/textViewTitleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/tvAddTitle"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAddName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvName"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleAdd" />
+
+    <TextView
+        android:id="@+id/textViewAddType"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvType"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddName" />
+
+    <TextView
+        android:id="@+id/textViewAddDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvDifficulty"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddType" />
+
+    <EditText
+        android:id="@+id/editTextAddType"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddType"
+        app:layout_constraintVertical_bias="0.0"
+        android:hint="@string/evTypeHint"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextAddName"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddName"
+        app:layout_constraintVertical_bias="1.0"
+        android:hint="@string/evNameHint"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextAddDifficulty"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/evDifficultyHint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddDifficulty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddDifficulty"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/editTextAddTime"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddTime"
+        app:layout_constraintVertical_bias="0.0"
+        android:hint="@string/evTimeHint"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextAddDate"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddDate"
+        app:layout_constraintVertical_bias="0.0"
+        android:hint="@string/evDateHint"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextAddPriority"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAddPriority"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddPriority"
+        app:layout_constraintVertical_bias="0.0"
+        android:hint="@string/evPriorityHint"
+        android:autofillHints="" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:onClick="saveClick"
+            android:text="@string/btnSave"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:onClick="cancelClick"
+            android:text="@android:string/cancel"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">planner_practice</string>
+    <string name="btnAddTask">Додати</string>
+    <string name="btnSave">Зберегти</string>
+    <string name="btnСancel">Відмінити</string>
+    <string name="btnCreatePlan">Генерувати</string>
+    <string name="tvName">Назва:</string>
+    <string name="tvType">Тип:</string>
+    <string name="tvDifficulty">Складність:</string>
+    <string name="tvTime">Час на виконання:</string>
+    <string name="tvDate">Дата виконання:</string>
+    <string name="tvPriority">Пріорітетність:</string>
+    <string name="tvAddTitle">Додавання завдання</string>
+    <string name="evNameHint">Завдання</string>
+    <string name="evTypeHint">Тип</string>
+    <string name="evDifficultyHint">1-10</string>
+    <string name="evTimeHint">10-999 хв</string>
+    <string name="evDateHint">01.01.2025</string>
+    <string name="evPriorityHint">1-10</string>
+    <string name="alertTitleDel">Видалити завдання?</string>
+    <string name="alertMessageDel">Якщо натисните ТАК, то завдання буде видалено, щоб відмінити натисність НІ.</string>
+    <string name="tvYes">ТАК</string>
+    <string name="tvNo">НІ</string>
+    <string name="toastAddTrue">Нове завдання додано</string>
+    <string name="toastAddFalse">Помилка вхідних даних</string>
+    <string name="toastDelTrue">Завдання видалено</string>
+    <string name="deleteX">X</string>
+</resources>
