@@ -12,6 +12,7 @@ public class DbManager {
     private Context context;
     private DbHelper dbHelper;
     private SQLiteDatabase db;
+
     public DbManager(Context context) {
         this.context = context;
         dbHelper = new DbHelper(context);
@@ -33,7 +34,7 @@ public class DbManager {
         db.insert(Tasks.TABLE_NAME, null, cv);
     }
 
-    public List<Task> getFromDb(String s){
+    public List<Task> getFromDb(String s) {
         List<Task> list = new ArrayList<>();
         Cursor cursor = db.query(Tasks.TABLE_NAME, null, s, null,
                 null, null, Tasks.DATE + " ASC, " + Tasks.PRIORITY + " ASC");
@@ -52,13 +53,13 @@ public class DbManager {
         return list;
     }
 
-    public void changeStatus(int id, int status){
+    public void changeStatus(int id, int status) {
         ContentValues cv = new ContentValues();
         cv.put(Tasks.STATUS, status);
         db.update(Tasks.TABLE_NAME, cv, "_ID = " + id, null);
     }
 
-    public void deleteTask(int id){
+    public void deleteTask(int id) {
         db.delete(Tasks.TABLE_NAME, "_ID = " + id, null);
     }
 

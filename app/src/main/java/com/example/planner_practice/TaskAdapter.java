@@ -74,7 +74,8 @@ public class TaskAdapter extends ArrayAdapter<Task> {
                                 dbManager.closeDb();
                                 remove(task);
                                 notifyDataSetChanged();
-                                Toast.makeText(getContext(), R.string.toastDelTrue, Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(), R.string.toastDelTrue,
+                                        Toast.LENGTH_LONG).show();
                             }
                         })
                         .setNegativeButton(R.string.tvNo, new DialogInterface.OnClickListener() {

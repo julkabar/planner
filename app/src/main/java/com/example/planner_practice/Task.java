@@ -87,7 +87,7 @@ public class Task {
         this.status = status;
     }
 
-    public String getInfo(){
+    public String getInfo() {
         return name + "\n\t[ скл. " + difficulty + ", пр. " + priority + "]\n\t— " + date + " (" + time + " хв.)";
     }
 }
