@@ -22,6 +22,16 @@ public class DbManager {
         db = dbHelper.getWritableDatabase();
     }
 
+    /**
+     * Додає нове завдання до бази даних.
+     *
+     * @param name назва завдання
+     * @param difficulty рівень складності
+     * @param time орієнтовна тривалість виконання (в хвилинах)
+     * @param date запланова дата виконання
+     * @param priority пріоритет завдання
+     * @param type тип завдання
+     */
     public void insertToDb(String name, int difficulty, int time, String date, int priority, String type) {
         ContentValues cv = new ContentValues();
         cv.put(Tasks.NAME, name);

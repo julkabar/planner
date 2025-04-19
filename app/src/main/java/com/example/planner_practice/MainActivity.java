@@ -12,7 +12,13 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-
+/**
+ * Основна активність планувальника.
+ * Відображає список завдань, дозволяє додавати нові та фільтрувати наявні.
+ *
+ * @author julkabar
+ * @version 1.0
+ */
 public class MainActivity extends AppCompatActivity {
     private DbManager dbManager;
     private ListView listViewTasks;
@@ -80,11 +86,23 @@ public class MainActivity extends AppCompatActivity {
         dbManager.closeDb();
     }
 
+    /**
+     * Обробник кнопки "Додати".
+     * Запускає активність для створення нового завдання.
+     *
+     * @param view
+     */
     public void addTask(View view) {
         Intent intent = new Intent(this, AddTask.class);
         startActivity(intent);
     }
 
+    /**
+     * Оновлює список задач на екрані.
+     *
+     * @param taskAdapter адаптер для роботи зі списком завдань
+     * @param tasks список наявних завдань
+     */
     public void displayTask(TaskAdapter taskAdapter, List<Task> tasks) {
         taskAdapter.clear();
         taskAdapter.addAll(tasks);
