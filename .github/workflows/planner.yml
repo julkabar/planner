@@ -1,0 +1,34 @@
+name: Planner
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Decode Keystore
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
+
+      - name: Build APK
+        run: ./gradlew assembleRelease
+
+      - name: Install Firebase CLI
+        run: curl -sL https://firebase.tools | bash
+
+      - name: Upload to Firebase
+        run: |
+          firebase login:ci --token "${{ secrets.FIREBASE_TOKEN }}"
+          firebase appdistribution:distribute app/build/outputs/apk/release/app-release.apk \
+            --app "1:845928744956:android:d410c969b3ff8f41c85479" \
+            --groups "testers"
