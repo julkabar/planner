@@ -16,4 +16,3 @@
 *.log
 local.properties
 /app/keystore
-/app/google-services.json
